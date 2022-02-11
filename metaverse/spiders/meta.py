@@ -32,7 +32,7 @@ class MetaSpider(scrapy.Spider):
         item = MetaverseItem()
         item["mContent"] = contentStr
         item["type"] = response.meta["type"]
-        item["type"] = response.meta["str_title"]
+        item["title"] = response.meta["str_title"]
         item["quote"] = response.meta["quote"]
         yield item
 
