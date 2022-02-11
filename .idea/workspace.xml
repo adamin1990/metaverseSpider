@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60f41e6c-3be5-4bd5-9c71-7329837f19d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/metaverse/spiders/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/metaverse/spiders/meta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metaverse/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/metaverse/pipelines.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
       <workItem from="1644388165674" duration="44000" />
       <workItem from="1644397338830" duration="41000" />
       <workItem from="1644397393492" duration="5896000" />
-      <workItem from="1644554083069" duration="14155000" />
+      <workItem from="1644554083069" duration="14252000" />
     </task>
     <servers />
   </component>
