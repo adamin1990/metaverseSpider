@@ -25,9 +25,9 @@ class MetaversePipeline:
         else:
             dt = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             sqlInsertThread = "INSERT INTO mtthreads(user_id,last_posted_user_id,category_id,type,title,post_count," \
-                              "posted_at,created_at,updated_at,issue_at,is_approved,quote_from,address) VALUES (1,1,%s,99,%s,1," \
-                              "%s,%s,%s,%s,1,%s,%s)"
-            self.cursor.execute(sqlInsertThread, (item['type'], item['title'], dt, dt,dt,dt,item['quote'],""))
+                              "posted_at,created_at,updated_at,issue_at,is_approved,quote_from,address,location) VALUES (1,1,%s,99,%s,1," \
+                              "%s,%s,%s,%s,1,%s,%s,%s)"
+            self.cursor.execute(sqlInsertThread, (item['type'], item['title'], dt, dt,dt,dt,item['quote'],"",""))
             intert_id = self.cursor.lastrowid
             sqlInsertPost = "INSERT INTO mtposts(user_id,thread_id,content,ip,port,created_at,updated_at,is_first,is_approved) " \
                             "VALUES(1,%s,%s,%s,1024,%s,%s,1,1)"
