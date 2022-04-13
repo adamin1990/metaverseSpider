@@ -1,11 +1,14 @@
+import re
+
 import scrapy
 import lxml.html
 
 from metaverse.items import MetaverseItem
+from bs4 import BeautifulSoup
 
 
 class MetaSpider(scrapy.Spider):
-    name = 'meta'
+    name = 'metav'
     allowed_domains = ['coinonpro.com']
     start_urls = ['https://www.coinonpro.com/category/nft/page/1']
 
@@ -25,10 +28,31 @@ class MetaSpider(scrapy.Spider):
 
 
     def parse_detail(self, response):
-        content = response.xpath ('((//div[@class="entry-content"])[1])').get()
+        content = response.xpath('(//div[@class="entry-content"]/div[@class=""])').get()
+        # print (content)
         content = content.replace("href=\"https://www.coinonpro.com","href=\"https://www.metaversezhijia.com")
+
         contentStr = content.replace("CoinON","元宇宙之家")
         # print(content)
+        # re_noscript = re.compile ('<\s*noscript[^>]*>[\s\S]*<\s*/\s*noscript\s*>', re.I) #noscript
+        re_script = re.compile ('<\s*script[^>]*>[\s\S]*<\s*/\s*script\s*>', re.I)  # Script
+        re_style = re.compile ('<\s*style[^>]*>[\s\S]*<\s*/\s*style\s*>', re.I)  # style
+        # re_img=  re.compile ('(?<!<noscript>)<\s*img[\s\S]*>',re.I)
+        # contentStr = re_noscript.sub("",contentStr)
+        contentStr = re_script.sub("",contentStr)
+        contentStr = re_style.sub("",contentStr)
+        # contentStr = re_img.sub("",contentStr)
+        # contentStr = contentStr.replace("/wp-content/uploads/2021/09/元宇宙之家.jpg","/metaverse.jpg")
+        contentStr = contentStr.replace ("<noscript>", "")
+        contentStr = contentStr.replace ("</noscript>", "")
+        print("-----------start------")
+        print(contentStr)
+        print ("-----------end------")
+        # soup = BeautifulSoup(contentStr,"lxml")
+        # [script.extract() for script in soup.findAll ('script')]
+        # [style.extract() for style in soup.findAll ('style')]
+        # [noscript.extract () for noscript in soup.findAll ('noscript')]
+        # contentStr = soup.get_text()
         item = MetaverseItem()
         item["mContent"] = contentStr
         item["type"] = response.meta["type"]

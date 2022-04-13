@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60f41e6c-3be5-4bd5-9c71-7329837f19d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/metaverse/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/metaverse/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metaverse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/metaverse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metaverse/spiders/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/metaverse/spiders/meta.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,12 +13,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="24rU7kaneWBdean7HCcvXqLLOWx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -47,7 +59,11 @@
       <workItem from="1644388165674" duration="44000" />
       <workItem from="1644397338830" duration="41000" />
       <workItem from="1644397393492" duration="5896000" />
-      <workItem from="1644554083069" duration="14321000" />
+      <workItem from="1644554083069" duration="14916000" />
+      <workItem from="1648121762028" duration="1342000" />
+      <workItem from="1649558321683" duration="3885000" />
+      <workItem from="1649776327635" duration="414000" />
+      <workItem from="1649808505286" duration="23814000" />
     </task>
     <servers />
   </component>
@@ -59,7 +75,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

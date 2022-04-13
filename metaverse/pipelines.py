@@ -13,7 +13,9 @@ from itemadapter import ItemAdapter
 
 class MetaversePipeline:
     def __init__(self) -> None:
-        self.db = pymysql.connect(host='localhost', user='meta', passwd='LymariPCRaP5n62S', db='meta', charset='utf8', port=3306)
+        self.db = pymysql.connect (host='localhost', user='root', passwd='DRsXT5ZJ6Oi55LPQ', db='meta', charset='utf8', port=3306)
+
+        # self.db = pymysql.connect(host='localhost', user='meta', passwd='LymariPCRaP5n62S', db='meta', charset='utf8', port=3306)
         self.cursor = self.db.cursor()
 
     def process_item(self, item, spider):
